@@ -29,7 +29,7 @@ case $cmd in
 
   #create container with username and password
   docker volume create pgdata
-  docker run --name jrvs-psql -e POSTGRES_PASSWORD=$password -e POSTGRES_USERNAME=$username -d -v pgdata:/var/lib/postgresql/data -p 5432:5432 postgres
+  docker run --name jrvs-psql -e POSTGRES_PASSWORD=$password -e POSTGRES_USER=$username -d -v pgdata:/var/lib/postgresql/data -p 5432:5432 postgres
   exit $?
   ;;
 
