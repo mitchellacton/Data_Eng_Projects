@@ -3,8 +3,9 @@ This project is under development. Since this project follows the GitFlow, the f
 # Introduction
 The purpose of this project is to produce a hardware resource management product that stores and displays usage data in the each node of a linux cluster.
 # Quick Start
-Use markdown code block for your quick-start commands
+
 - Start a psql instance using psql_docker.sh
+-     psql_docker.sh start|stop|create [db_username][db_password]
 - Create tables using ddl.sql
 - Insert hardware specs data into the DB using host_info.sh
 - Insert hardware usage data into the DB using host_usage.sh
