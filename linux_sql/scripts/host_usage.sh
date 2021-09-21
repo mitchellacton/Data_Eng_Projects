@@ -19,8 +19,7 @@ mem_info=$(free)
 hostname=$(hostname -f)
 
 #Assign specific hardware information to variables
-#timestamp=$(date +"%F %T")
-timestamp=$(date +"%Y-%m-%d %H:%M:%S")
+timestamp=$(date +"%F %T")
 memory_free=$(echo "$mem_info" | egrep "Mem:" | awk '{print $4}' | xargs)
 cpu_idle=$(vmstat | tail -1 | awk '{print $15}' | xargs)
 cpu_kernel=$(vmstat | tail -1 | awk '{print $14}' | xargs)
@@ -30,7 +29,7 @@ disk_available=${disk_available_temp::-1}
 
 #-----PSQL-----
 #get host id
-host_id_string="(SELECT id,
+host_id_cmd="(SELECT id,
               '$timestamp','$memory_free',
               '$cpu_idle','$cpu_kernel',
               '$disk_io','$disk_available' from host_info WHERE hostname='$hostname')";
@@ -38,7 +37,7 @@ host_id_string="(SELECT id,
 insert_stmt="INSERT INTO host_usage(
         host_id,timestamp,memory_free,
         cpu_idle,cpu_kernel,disk_io,disk_available)
-        $host_id_string
+        $host_id_cmd
       "
 
 export PGPASSWORD=$psql_password
