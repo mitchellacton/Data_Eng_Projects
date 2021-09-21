@@ -13,14 +13,14 @@ CREATE TABLE IF NOT EXISTS host_info
 
 CREATE TABLE IF NOT EXISTS host_usage
 (
-    "timestamp"     TIMESTAMP NOT NULL,
-    host_id SERIAL  PRIMARY KEY NOT NULL,
+    timestamp     TIMESTAMP NOT NULL,
+    host_id         INTEGER NOT NULL,
     memory_free     INT NOT NULL,
     cpu_idle        FLOAT NOT NULL,
     cpu_kernel      FLOAT NOT NULL,
     disk_io         INT NOT NULL,
     disk_available  INT NOT NULL,
-    CONSTRAINT fk_usage
-    FOREIGN KEY(host_id)
-    REFERENCES host_info(id)
+    CONSTRAINT PK_host_usage PRIMARY KEY(timestamp, host_id),
+    CONSTRAINT fk_usage FOREIGN KEY(host_id)
+        REFERENCES host_info(id)
     )
