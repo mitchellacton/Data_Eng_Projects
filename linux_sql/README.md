@@ -32,7 +32,7 @@ tool for future resource planning.
 - Crontab setup
 
       $ crontab -e
-      * * * * * bash ./scipts/host_usage.sh psql_host psql_port db_name psql_user psql_password > /tmp/host_usage.log
+      * * * * * bash ./scripts/host_usage.sh psql_host psql_port db_name psql_user psql_password > /tmp/host_usage.log
 
 - Sample Database PSQL queries found in sql/queries.sql
 
