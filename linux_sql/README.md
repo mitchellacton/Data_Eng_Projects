@@ -58,30 +58,30 @@ queries the system administrator may find useful.
 ![my image](./assets/architecture.png)
 ## Scripts
 
-###psql_docker.sh
+### psql_docker.sh
     # Used to create a new PSQL docker instance with given username and password
     $ ./scripts/psql_docker.sh create db_username db_password
     # Used to start docker container
     $ ./scripts/psql_docker.sh start
     # Used to stop docker container
     $ ./scripts/psql_docker.sh stop
-###ddl.sql
+### ddl.sql
     # Used to create PSQL database and tables
     $ psql -h <hostname> -U <PSQL User> -d <db name> -f .sql/ddl.sql
 
     # Creates tables host_info and host_usage
     
-###host_info.sh
+### host_info.sh
     # Used to populate host_info table with system hardware information
     $ ./scripts/host_info.sh psql_host psql_port db_name psql_user psql_password
 
-###host_usage.sh
+### host_usage.sh
     # Used to populate host_usage table with system resource usage data
     $ ./scripts/host_usage.sh psql_host psql_port db_name psql_user psql_password
-###crontab
+### crontab
 Automatically runs `host_usage.sh` every minute to store real time usage data in 
 hosts_usage
-###queries.sql
+### queries.sql
 Three sample SQL queries, each intended to solve a practical business problem:
 1. View hosts in descending order of total system memory, grouped with hosts having
 equal numbers of CPU cores
