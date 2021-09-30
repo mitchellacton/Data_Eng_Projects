@@ -47,7 +47,7 @@ public class LambdaStreamExcImp implements LambdaStreamExc {
 
   @Override
   public IntStream createIntStream(int start, int end) {
-    return IntStream.range(start, end);
+    return IntStream.range(start, end+1);
   }
 
   @Override
