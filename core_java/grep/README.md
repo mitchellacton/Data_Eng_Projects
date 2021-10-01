@@ -1,6 +1,4 @@
 # Introduction
-(50-100 words)
-Discuss the design of each app. What does the app do? What technologies have you used? (e.g. core java, libraries, lambda, IDE, docker, etc..)
 
 The Java Grep app is meant to mimic the Linux command line `grep` function, to
 recursively search through the provided directory to find files containing a
