@@ -17,11 +17,11 @@ import org.apache.log4j.BasicConfigurator;
 
 public class JavaGrepLambdaImp implements JavaGrep{
 
-  final Logger logger = LoggerFactory.getLogger(JavaGrep.class);
+final Logger logger = LoggerFactory.getLogger(JavaGrep.class);
 
-  private String regex;
-  private String rootPath;
-  private String outFile;
+private String regex;
+private String rootPath;
+private String outFile;
 
   public static void main(String[] args) {
     if (args.length != 3) {
