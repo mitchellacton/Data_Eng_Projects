@@ -24,7 +24,7 @@ To run the application:
     #Run in Docker container: 
     docker run --rm docker_user/grep <regex> <rootPath> <outFile>
 
-#Implemenation
+# Implemenation
 ## Pseudocode
 At the core of the application is the `void process()` method, which calls various helper 
 functions as outlined in the pseudocode below:
