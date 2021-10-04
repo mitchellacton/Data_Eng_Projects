@@ -65,18 +65,23 @@ public class JavaGrepImp implements JavaGrep{
   }
 
   @Override
-  public List<String> readLines(File inputFile) throws IOException{
+  public List<String> readLines(File inputFile){
     List<String> lineList = new ArrayList<>();
-    FileReader fileReader = new FileReader(inputFile);
-    BufferedReader bufferedReader = new BufferedReader(fileReader);
-    String lines = bufferedReader.readLine();
+    try {
+      FileReader fileReader = new FileReader(inputFile);
+      BufferedReader bufferedReader = new BufferedReader(fileReader);
+      String lines = bufferedReader.readLine();
 
-    if (lines != null) {
-      lineList.add(lines);
-    } else {
-      bufferedReader.close();
+      if (lines != null) {
+        lineList.add(lines);
+      } else {
+        bufferedReader.close();
+      }
+    } catch (IOException ex){
+      throw new RuntimeException("In readLines(" + inputFile + "), an IOException was thrown", ex);
     }
     return lineList;
+
   }
 
   @Override
