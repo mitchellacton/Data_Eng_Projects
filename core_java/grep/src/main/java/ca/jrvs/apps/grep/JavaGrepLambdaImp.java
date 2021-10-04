@@ -15,7 +15,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.apache.log4j.BasicConfigurator;
 
-public class JavaGrepLambdaImp implements JavaGrep{
+public class JavaGrepLambdaImp extends JavaGrepImp {
 
   final Logger logger = LoggerFactory.getLogger(JavaGrep.class);
 
@@ -66,66 +66,5 @@ public class JavaGrepLambdaImp implements JavaGrep{
       }
     });
     return fileList;
-  }
-
-  @Override
-  public List<String> readLines(File inputFile){
-    List<String> lineList = new ArrayList<>();
-    try {
-      FileReader fileReader = new FileReader(inputFile);
-      BufferedReader bufferedReader = new BufferedReader(fileReader);
-      String lines = bufferedReader.readLine();
-
-      if (lines != null) {
-        lineList.add(lines);
-      } else {
-        bufferedReader.close();
-      }
-    } catch (IOException ex){
-      throw new RuntimeException("In readLines(" + inputFile + "), an IOException was thrown", ex);
-    }
-    return lineList;
-
-  }
-
-  @Override
-  public void writeToFile(List<String> lines) throws IOException{
-    FileWriter wr = new FileWriter(this.getOutFile());
-    BufferedWriter bwr = new BufferedWriter(wr);
-
-    for (String matchedLine : lines) {
-      bwr.write(String.valueOf(matchedLine));
-    }
-    bwr.flush();
-  }
-
-  @Override
-  public boolean containsPattern(String line) {
-    return Pattern.matches(getRegex(), line);
-  }
-
-  // Getters and Setters
-  public String getRootPath(){
-    return rootPath;
-  }
-
-  public void setRootPath(String rootPath) {
-    this.rootPath = rootPath;
-  }
-
-  public String getRegex(){
-    return regex;
-  }
-
-  public void setRegex(String regex) {
-    this.regex = regex;
-  }
-
-  public String getOutFile(){
-    return outFile;
-  }
-
-  public void setOutFile(String outFile) {
-    this.outFile = outFile;
   }
 }
