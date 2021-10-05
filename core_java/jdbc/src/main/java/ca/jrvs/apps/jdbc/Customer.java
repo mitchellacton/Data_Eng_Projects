@@ -31,4 +31,19 @@ public class Customer implements DataTransferObject {
   public String getState() {return state;}
   public void setZipCode(String zipCode) {this.zipCode = zipCode;}
   public String getZipCode() {return zipCode;}
+
+  @Override
+  public String toString() {
+    return "Customer{" +
+        "id=" + id +
+        ", firstName='" + firstName + '\'' +
+        ", lastName='" + lastName + '\'' +
+        ", email='" + email + '\'' +
+        ", phone='" + phone + '\'' +
+        ", address='" + address + '\'' +
+        ", city='" + city + '\'' +
+        ", state='" + state + '\'' +
+        ", zipCode='" + zipCode + '\'' +
+        '}';
+  }
 }
