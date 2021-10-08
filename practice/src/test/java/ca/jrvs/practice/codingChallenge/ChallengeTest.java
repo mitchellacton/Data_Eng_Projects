@@ -39,4 +39,25 @@ public class ChallengeTest {
     assertEquals(1234, testInstance.stringToInt(strA));
     assertEquals(-10, testInstance.stringToInt(strB));
   }
+
+  @Test
+  void swapTwoNumbersTest() {
+    SwapTwoNumbers testInstance = new SwapTwoNumbers();
+    int[] arr = {10,20};
+    int[] expected = {20,10};
+    assertArrayEquals(expected, testInstance.swapNumbers(arr));
+  }
+
+  @Test
+  void stackUsingQueueTest() {
+    StackUsingQueue testStack = new StackUsingQueue();
+    testStack.push(1);
+    testStack.push(2);
+    assertEquals(2, testStack.pop());
+    assertEquals(1, testStack.top());
+    assertEquals(false, testStack.empty());
+    assertEquals(1, testStack.pop());
+    assertEquals(true, testStack.empty());
+
+  }
 }
