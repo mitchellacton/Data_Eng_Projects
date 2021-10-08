@@ -20,8 +20,8 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_MitchellAc
 **Core Java Apps** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_MitchellActon/tree/master/core_java)]:
       
   - Twitter App: Under Development
-  - JDBC App: Under Development
-  - Grep App: Under Development
+  - JDBC App: In this project I built an application using the Java Database Connectivity (JDBC) API to connect to a database and run queries to access the data. The app provides a tool for performing CRUD (Create, Read, Update, Delete) operations on the data within the database. The project build was managed using Maven, and the Postgres database runs within a Docker container.
+  - Grep App: I built this app to mimic the Linux command line grep function. The program first recursively searches through the provided directory to find files containing a user-defined keyword. The application reads through the files and outputs lines containing the search term to the provided output file. The project was completed using the IntelliJ Ultimate IDE, and various methods were written using the Java 8 Lambda Stream API where applicable. The project was packaged using Maven and the Maven Shade plugin, and uploaded to DockerHub as a Docker Image.
 
 
 ## Highlighted Projects
@@ -34,7 +34,7 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_MitchellAc
 
 ## Professional Experiences
 
-**Software Developer, Jarvis (Sept. 2021 - present)**: Responsible for developing various data engineering and analytics tools using an Agile/Scrum methodology. Gained first-hand experience with Linux/bash, Docker, PostgreSQL, Java, and GitFlow. Completed software development projects such as: Linux Cluster Resource Monitor to record and store hardware and usage data in PostgreSQL database provisioned in Docker.
+**Software Developer, Jarvis (Sept. 2021 - present)**: Responsible for developing various data engineering and analytics tools using an Agile/Scrum methodology. Completed software development projects using tools such as Java, Linux Bash, RDBMS, SQL, Docker, and Maven, to create robust solutions to real-world business problems. Some examples of these projects include a Linux cluster monitoring agent, a grep-like application to recursively search directories for files containing search terms, and a JDBC app to perform CRUD operations against data in a PostgreSQL database running in a Docker container.
 
 **Product Development Engineer, Pharmasees Inc. (Apr 2021 - Sept 2021)**: Designed the hardware and software for a medical device used to image and count white blood cells non-invasively. The hardware aspect involved optical system design and simulation, and 3D modelling of components, using AutoCAD and Zemax OpticStudio. The software aspect involved developing a machine learning computer vision algorithm (Python: PyTorch, OpenCV, scikit-learn) to detect and count white blood cells in videos of blood vessels in real-time.
 
