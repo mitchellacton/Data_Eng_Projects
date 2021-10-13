@@ -36,7 +36,7 @@ tool for future resource planning.
 
 - Sample Database PSQL queries found in sql/queries.sql
 
-# Implemenation
+# Implementation
 The Linux cluster consists of individual hosts running CentOS 7, connected
 through a switching hub using internal IPv4 addresses. To use this
 monitoring agent, the system administrator must set up a docker container,
