@@ -25,5 +25,8 @@ public class Coordinates {
   public int size() {
     return coordinates.length;
   }
+  public float[] getCoordinates(){
+    return coordinates;
+  }
 
 }

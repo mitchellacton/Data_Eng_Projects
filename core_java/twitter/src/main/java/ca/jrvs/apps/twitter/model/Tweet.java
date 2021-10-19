@@ -129,12 +129,20 @@ public class Tweet {
     this.favorited = favorited;
   }
 
+  public boolean getFavorited() {
+    return this.favorited;
+  }
+
   public boolean isRetweeted() {
     return retweeted;
   }
 
   public void setRetweeted(boolean retweeted) {
     this.retweeted = retweeted;
+  }
+
+  public boolean getRetweeted() {
+    return this.retweeted;
   }
 }
 

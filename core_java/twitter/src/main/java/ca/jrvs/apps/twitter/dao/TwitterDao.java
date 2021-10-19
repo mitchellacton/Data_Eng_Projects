@@ -69,7 +69,7 @@ public class TwitterDao implements CrdDao<Tweet, String> {
     return parseResponse(response, HTTP_OK);
   }
 
-  private Tweet parseResponse(HttpResponse response, Integer expectedStatusCode){
+  public Tweet parseResponse(HttpResponse response, Integer expectedStatusCode){
     Tweet tweet;
     int status = response.getStatusLine().getStatusCode();
     if (status != expectedStatusCode) {
