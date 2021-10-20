@@ -9,19 +9,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class TwitterDaoTest extends TestCase {
-  //private TwitterDao twitterDao;
-
-
-//  @Before
-//  public void Setup(){
-//    String CONSUMER_KEY = System.getenv("consumerKey");
-//    String CONSUMER_SECRET = System.getenv("consumerSecret");
-//    String ACCESS_TOKEN = System.getenv("accessToken");
-//    String TOKEN_SECRET = System.getenv("tokenSecret");
-//
-//    this.httpHelper = new TwitterHttpHelper(CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, TOKEN_SECRET);
-//    twitterDao = new TwitterDao(httpHelper);
-//  }
 
   @Test
   public void testCreate(){

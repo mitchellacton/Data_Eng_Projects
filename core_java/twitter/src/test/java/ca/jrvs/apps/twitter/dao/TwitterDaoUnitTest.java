@@ -46,16 +46,6 @@ public class TwitterDaoUnitTest {
 
   @Before
   public void setup() {
-//    this.tweet = new Tweet();
-//    String hashTag = " #GoodbyeWorld";
-//    String text = "Your birthright was to die";
-//    Coordinates coordinates = new Coordinates();
-//    float lon = 32.039f;
-//    float lat = 125.763f;
-//    coordinates.setCoordinates(new float[] {lat, lon});
-//
-//    this.tweet.setText(text + hashTag);
-//    this.tweet.setCoordinates(coordinates);
     String consumerKey = System.getenv("consumerKey");
     String consumerSecret = System.getenv("consumerSecret");
     String accessToken = System.getenv("accessToken");
