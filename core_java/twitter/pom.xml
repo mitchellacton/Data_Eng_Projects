@@ -64,7 +64,7 @@
         <artifactId>spring-boot-maven-plugin</artifactId>
         <!-- Specify main class to start -->
         <configuration>
-          <mainClass>ca.jrvs.apps.twitter.controller.TwitterApp</mainClass>
+          <mainClass>ca.jrvs.apps.twitter.spring.TwitterCLISpringBoot</mainClass>
         </configuration>
       </plugin>
     </plugins>
