@@ -42,7 +42,7 @@ to handle the HTTP requests and business logic. A detailed diagram of the design
 is shown below.
 ## UML diagram
 ![](TwitterAppUML.JPG)
-## explain each component(app/main, controller, service, DAO) (30-50 words each)
+
 ### Application
 The top layer is the TwitterApp component. It is responsible for parsing the
 arguments passed by the user, passing the specified command down to the controller
