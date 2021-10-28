@@ -60,4 +60,32 @@ public class ChallengeTest {
     assertEquals(true, testStack.empty());
 
   }
+
+  @Test
+  void validParenthesesTest(){
+    ValidParentheses validParentheses = new ValidParentheses();
+    String s1 = "()";
+    String s2 = "(]";
+    String s3 = "([{}]{})";
+    String s4 = ")))";
+
+    assertEquals(true, validParentheses.isValid(s1));
+    assertEquals(false, validParentheses.isValid(s2));
+    assertEquals(true, validParentheses.isValid(s3));
+    assertEquals(false, validParentheses.isValid(s4));
+  }
+
+  @Test
+  void validPalindromeTest(){
+    ValidPalindrome validPalindrome = new ValidPalindrome();
+    String s1 = "hello world";
+    String s2 = "racecar";
+    String s3 = "dog on no god";
+    String s4 = "mom? mom?";
+
+    assertEquals(false, validPalindrome.isValid(s1));
+    assertEquals(true, validPalindrome.isValid(s2));
+    assertEquals(true, validPalindrome.isValid(s3));
+    assertEquals(true, validPalindrome.isValid(s4));
+  }
 }
