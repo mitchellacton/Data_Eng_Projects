@@ -88,4 +88,24 @@ public class ChallengeTest {
     assertEquals(true, validPalindrome.isValid(s3));
     assertEquals(true, validPalindrome.isValid(s4));
   }
+
+  @Test
+  void fibonacciNumberTest(){
+    FibonacciNumber fibonacciNumber = new FibonacciNumber();
+    assertEquals(1, fibonacciNumber.getFib(2));
+    assertEquals(832040, fibonacciNumber.getFib(30));
+  }
+
+  @Test
+  void queueUsingStackTest(){
+    QueueUsingStack myQueue = new QueueUsingStack();
+
+    myQueue.push(1);
+    myQueue.push(2);
+    assertEquals(false, myQueue.empty());
+    assertEquals(1, myQueue.peek());
+    assertEquals(1, myQueue.pop());
+    assertEquals(2, myQueue.pop());
+    assertEquals(true, myQueue.empty());
+  }
 }

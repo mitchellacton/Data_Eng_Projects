@@ -2,12 +2,17 @@ package ca.jrvs.practice.codingChallenge;
 
 import java.util.Stack;
 
-public class ValidPalindrome {
+/**
+ * ticket: https://www.notion.so/jarvisdev/Valid-Palindrome-12630367fc8c41678973c028069c21d8
+ */
 
-  public static void main(String[] args) {
-    String s = "mom";
-    isValid(s);
-  }
+public class ValidPalindrome {
+  /**
+   *
+   * Big-O: O(n)
+   * Justification: iterates once through string characters
+   *
+   */
   public static boolean isValid(String s) {
     s = s.toLowerCase();
     s = s.replaceAll("[^A-Za-z0-9]", "");
