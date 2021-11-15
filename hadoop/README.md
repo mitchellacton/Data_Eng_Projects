@@ -78,10 +78,10 @@ over all records from every year.
 - Discuss how you optimized Hive queries? (e.g. partitions, columnar, etc..)
 
 ### Zeppelin Notebook
-![](Assets/Notebook part 1.png)
+![](Assets/Notebook_1.png)
 
 
-![](Assets/Notebook part 2.png)
+![](Assets/Notebook_2.png)
 # Improvements
 - Partitioning the parquet files would have greatly reduced query time
 - Indexing the tables would improve the search time from O(N) to O(log(n))
