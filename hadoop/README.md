@@ -79,6 +79,8 @@ over all records from every year.
 
 ### Zeppelin Notebook
 ![](Assets/Notebook part 1.png)
+
+
 ![](Assets/Notebook part 2.png)
 # Improvements
 - Partitioning the parquet files would have greatly reduced query time
