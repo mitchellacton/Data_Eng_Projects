@@ -51,6 +51,11 @@
       ],
       "git_url": "/core_java",
       "name": "Core Java Apps"
+    },
+    {
+      "description": "In this project I set up a compute cluster to process large volumes financial trade data. I provisioned the cluster of 1 master and 2 worker nodes using GCP DataProc, and exported the data set from Google BigQuery to my cluster's HDFS. I queried the data using HiveQL in the Zeppelin web interface. To optimize the queries, I partitioned the data by year, and converted the file from CSV to a columnar parquet file. This significantly improved query time.",
+      "git_url": "/hadoop",
+      "name": "Hadoop Data Processing"
     }
   ],
   "name": "Mitchell Acton",
@@ -77,7 +82,7 @@
   "professional_experience": [
     {
       "company": "Jarvis",
-      "description": "Responsible for developing various data engineering and analytics tools using an Agile/Scrum methodology. Completed software development projects using tools such as Java, Linux Bash, RDBMS, SQL, Docker, and Maven, to create robust solutions to real-world business problems. Some examples of these projects include a Linux cluster monitoring agent, a grep-like application to recursively search directories for files containing search terms, a JDBC app to perform CRUD operations against data in a PostgreSQL database running in a Docker container, and an app that uses Twitter's REST API to post, view, and delete tweets from the command line.",
+      "description": "Responsible for developing various data engineering and analytics tools using an Agile/Scrum methodology. Completed software development projects using tools such as Java, Linux Bash, RDBMS, SQL, Docker, and Maven, to create robust solutions to real-world business problems. Some examples of these projects include a Linux cluster monitoring agent, a grep-like application to recursively search directories for files containing search terms, a JDBC app to perform CRUD operations against data in a PostgreSQL database running in a Docker container, an app that uses Twitter's REST API to post, view, and delete tweets from the command line, and BigData analysis using Hadoop with Hive and Zeppelin.",
       "duration": "Sept. 2021 - present",
       "title": "Software Developer"
     },
@@ -97,7 +102,7 @@
   "skills": {
     "competent": [
       "Linux/Bash",
-      "Front End (HTML/CSS)",
+      "Hadoop",
       "Docker",
       "Machine Learning (Python scikit-learn, Pandas, NumPy)",
       "Cloud Computing (MS Azure/IBM Watson)",
