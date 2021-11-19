@@ -27,7 +27,7 @@ import org.springframework.data.repository.CrudRepository;
  */
 public class MarketDataDao implements CrudRepository<IexQuote, String> {
 
-  private static final String IEX_BATCH_PATH = "/stock/market/batch?symbols=%&types=quote&token=";
+  private static final String IEX_BATCH_PATH = "/stock/market/batch?symbols=%s&types=quote&token=";
   private final String IEX_BATCH_URL;
 
   private Logger logger = LoggerFactory.getLogger(MarketDataDao.class);
@@ -39,6 +39,7 @@ public class MarketDataDao implements CrudRepository<IexQuote, String> {
     this.httpClientConnectionManager = httpClientConnectionManager;
     IEX_BATCH_URL = marketDataConfig.getHost() + IEX_BATCH_PATH + marketDataConfig.getToken();
   }
+
 
   /**
    * Get and IexQuote
@@ -121,5 +122,50 @@ public class MarketDataDao implements CrudRepository<IexQuote, String> {
         .setConnectionManager(httpClientConnectionManager)
         .setConnectionManagerShared(true)
         .build();
+  }
+
+  @Override
+  public <S extends IexQuote> S save(S s) {
+    throw new UnsupportedOperationException("Not implemented!");
+  }
+
+  @Override
+  public <S extends IexQuote> Iterable<S> saveAll(Iterable<S> iterable) {
+    throw new UnsupportedOperationException("Not implemented!");
+  }
+
+  @Override
+  public Iterable<IexQuote> findAll() {
+    throw new UnsupportedOperationException("Not implemented!");
+  }
+
+  @Override
+  public boolean existsById(String s) {
+    throw new UnsupportedOperationException("Not implemented!");
+  }
+
+  @Override
+  public long count() {
+    throw new UnsupportedOperationException("Not implemented!");
+  }
+
+  @Override
+  public void deleteById(String s) {
+    throw new UnsupportedOperationException("Not implemented!");
+  }
+
+  @Override
+  public void delete(IexQuote iexQuote) {
+    throw new UnsupportedOperationException("Not implemented!");
+  }
+
+  @Override
+  public void deleteAll(Iterable<? extends IexQuote> iterable) {
+    throw new UnsupportedOperationException("Not implemented!");
+  }
+
+  @Override
+  public void deleteAll() {
+    throw new UnsupportedOperationException("Not implemented!");
   }
 }
