@@ -18,7 +18,9 @@ public class AppConfig {
 
   @Bean
   public MarketDataConfig marketDataConfig() {
-    MarketDataConfig dataConfig = new MarketDataConfig("https://cloud.iexapis.com/v1", System.getenv("IEX_SECRET"));
+    MarketDataConfig dataConfig = new MarketDataConfig();
+    dataConfig.setHost("https://cloud.iexapis.com/v1/");
+    dataConfig.setToken(System.getenv("IEX_PUB_TOKEN"));
     return dataConfig;
   }
 

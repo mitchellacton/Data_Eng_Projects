@@ -17,7 +17,9 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class QuoteDao implements CrudRepository<Quote, String> {
 
   private static final String TABLE_NAME = "quote";
@@ -121,7 +123,7 @@ public class QuoteDao implements CrudRepository<Quote, String> {
     return jdbcTemplate.queryForObject("SELECT count(*) FROM " + TABLE_NAME, Long.class);
   }
 
-  Override
+  @Override
   public void deleteAll() {
     String deleteAll = "DELETE FROM " + TABLE_NAME;
     jdbcTemplate.update(deleteAll);
