@@ -39,14 +39,27 @@ public class TraderAccountService {
       securityOrderDao.deleteById(traderId);
       accountDao.deleteById(traderId);
       traderDao.deleteById(traderId);
+    } else {
+      throw new RuntimeException("Unable to delete Trader");
     }
   }
 
   public Account deposit(Integer traderId, Double fund) {
-
+    if (fund <= 0) {
+      throw new IllegalArgumentException("Can't deposit zero funds");
+    }
+    Account account = accountDao.findById(traderId).get();
+    account.setAmount(account.getAmount() + fund);
+    return account;
   }
 
   public Account withdraw(Integer traderId, Double fund) {
+    Account account = accountDao.findById(traderId).get();
+    if (account.getAmount()<fund) {
+      throw new IllegalArgumentException("Insufficient funds");
+    }
+    account.setAmount(account.getAmount() - fund);
+    return account;
 
   }
 
