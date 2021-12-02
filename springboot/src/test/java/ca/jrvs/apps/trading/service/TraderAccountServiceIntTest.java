@@ -60,6 +60,7 @@ public class TraderAccountServiceIntTest {
 
   @Test
   public void createTraderAndAccount() {
+    Trader trader = new Trader();
     TraderAccountView traderAccountView = traderAccountService.createTraderAndAccount(trader);
     assertEquals(2, accountDao.count());
   }

@@ -5,6 +5,7 @@ import ca.jrvs.apps.trading.model.domain.Trader;
 import ca.jrvs.apps.trading.model.domain.TraderAccountView;
 import ca.jrvs.apps.trading.service.TraderAccountService;
 import java.time.LocalDate;
+import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
@@ -30,12 +31,14 @@ public class TraderAccountController {
     this.traderAccountService = traderAccountService;
   }
 
+
+
+  @PostMapping(path = "/firstname/{firstname}/lastname/{lastname}/dob/{dob}/country/{country}/email/{email}",
+      produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
   @ResponseStatus(HttpStatus.CREATED)
   @ResponseBody
-  @PostMapping(path = "/firstname/{firstname}/lastname/{lastname}/dob/{dob}/country/{country}/email/{email}",
-      produces = {MediaType.APPLICATION_JSON_UTF8_VALUE}))
   public TraderAccountView createTrader(@PathVariable String firstname, @PathVariable String lastname,
-      @PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd")LocalDate dob,
+      @PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") Date dob,
       @PathVariable String country, @PathVariable String email) {
     try {
       Trader trader = new Trader();
@@ -50,9 +53,10 @@ public class TraderAccountController {
     }
   }
 
+  @PostMapping(path = "/",
+      produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
   @ResponseStatus(HttpStatus.CREATED)
   @ResponseBody
-  @PostMapping(path = "/", produces = {MediaType.APPLICATION_JSON_UTF8_VALUE}))
   public TraderAccountView createTrader(@RequestBody Trader trader) {
     try {
       return traderAccountService.createTraderAndAccount(trader);
