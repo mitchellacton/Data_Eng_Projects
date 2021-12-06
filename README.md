@@ -8,7 +8,7 @@ I graduated with a Master of Engineering degree from the University of Western O
 
 **Competent:** Linux/Bash, Hadoop, Docker, Machine Learning (Python scikit-learn, Pandas, NumPy), Cloud Computing (MS Azure/IBM Watson), Maven
 
-**Familiar:** C++, Spring, Neural Networks, Networking (TCP/IP), Computer Vision (Python OpenCV, PyTorch)
+**Familiar:** C++, Springboot, Neural Networks, Networking (TCP/IP), Computer Vision (Python OpenCV, PyTorch)
 
 ## Jarvis Projects
 
@@ -25,6 +25,8 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_MitchellAc
 
 **Hadoop Data Processing** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_MitchellActon/tree/master/hadoop)]: In this project I set up a compute cluster to process large volumes financial trade data. I provisioned the cluster of 1 master and 2 worker nodes using GCP DataProc, and exported the data set from Google BigQuery to my cluster's HDFS. I queried the data using HiveQL in the Zeppelin web interface. To optimize the queries, I partitioned the data by year, and converted the file from CSV to a columnar parquet file. This significantly improved query time.
 
+**Hadoop Data Processing** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_MitchellActon/tree/master/springboot)]: For this project I built a trading platform in Java. The application allows traders to create accounts, add and withdraw funds, buy and sell securities and view information about any stock. The program was designed using three-layer architecture, and dependencies were managed using Springboot. A PostgreSQL database was provisioned to store trader and stock data, which was pulled from the IEX Cloud. Each layer of the application was tested using JUnit4 in IntelliJ. The build was managed using Maven and deployed using Docker.
+
 
 ## Highlighted Projects
 **Algorithm and Simulation Visualizer Website** [[GitHub](https://mitchellacton.github.io/WebPortfolio/site/)]: Created an interactive website to host various sorting and pathfinding algorithm visualizers, as well as some creative simulations written in JavaScript. The algorithm visualizers include sorting algorithms such as bubble sort, insertion sort, selection sort, quick sort, and merge sort, pathfinding algorithms such as Djikstra's Algorithm and A* Search, with an included recursive maze generator. The simulations include an ecosystem and evolution simulator, a gravity physics engine, and a boids flocking algorithm with quadtree optimization.
@@ -36,7 +38,7 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_MitchellAc
 
 ## Professional Experiences
 
-**Software Developer, Jarvis (Sept. 2021 - present)**: Responsible for developing various data engineering and analytics tools using an Agile/Scrum methodology. Completed software development projects using tools such as Java, Linux Bash, RDBMS, SQL, Docker, and Maven, to create robust solutions to real-world business problems. Some examples of these projects include a Linux cluster monitoring agent, a grep-like application to recursively search directories for files containing search terms, a JDBC app to perform CRUD operations against data in a PostgreSQL database running in a Docker container, an app that uses Twitter's REST API to post, view, and delete tweets from the command line, and BigData analysis using Hadoop with Hive and Zeppelin.
+**Software Developer, Jarvis (Sept. 2021 - present)**: Responsible for developing various data engineering and analytics tools using an Agile/Scrum methodology. Completed software development projects using tools such as Java, Linux Bash, RDBMS, SQL, Docker, and Maven, to create robust solutions to real-world business problems. Some examples of these projects include a Linux cluster monitoring agent, a grep-like application to recursively search directories for files containing search terms, a JDBC app to perform CRUD operations against data in a PostgreSQL database running in a Docker container, an app that uses Twitter's REST API to post, view, and delete tweets from the command line, BigData analysis using Hadoop with Hive and Zeppelin, and a trading platform built using 3-layer architecture with Springboot.
 
 **Product Development Engineer, Pharmasees Inc. (Apr 2021 - Sept 2021)**: Designed the hardware and software for a medical device used to image and count white blood cells non-invasively. The hardware aspect involved optical system design and simulation, and 3D modelling of components, using AutoCAD and Zemax OpticStudio. The software aspect involved developing a machine learning computer vision algorithm (Python: PyTorch, OpenCV, scikit-learn) to detect and count white blood cells in videos of blood vessels in real-time.
 
