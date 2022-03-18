@@ -60,4 +60,52 @@ public class ChallengeTest {
     assertEquals(true, testStack.empty());
 
   }
+
+  @Test
+  void validParenthesesTest(){
+    ValidParentheses validParentheses = new ValidParentheses();
+    String s1 = "()";
+    String s2 = "(]";
+    String s3 = "([{}]{})";
+    String s4 = ")))";
+
+    assertEquals(true, validParentheses.isValid(s1));
+    assertEquals(false, validParentheses.isValid(s2));
+    assertEquals(true, validParentheses.isValid(s3));
+    assertEquals(false, validParentheses.isValid(s4));
+  }
+
+  @Test
+  void validPalindromeTest(){
+    ValidPalindrome validPalindrome = new ValidPalindrome();
+    String s1 = "hello world";
+    String s2 = "racecar";
+    String s3 = "dog on no god";
+    String s4 = "mom? mom?";
+
+    assertEquals(false, validPalindrome.isValid(s1));
+    assertEquals(true, validPalindrome.isValid(s2));
+    assertEquals(true, validPalindrome.isValid(s3));
+    assertEquals(true, validPalindrome.isValid(s4));
+  }
+
+  @Test
+  void fibonacciNumberTest(){
+    FibonacciNumber fibonacciNumber = new FibonacciNumber();
+    assertEquals(1, fibonacciNumber.getFib(2));
+    assertEquals(832040, fibonacciNumber.getFib(30));
+  }
+
+  @Test
+  void queueUsingStackTest(){
+    QueueUsingStack myQueue = new QueueUsingStack();
+
+    myQueue.push(1);
+    myQueue.push(2);
+    assertEquals(false, myQueue.empty());
+    assertEquals(1, myQueue.peek());
+    assertEquals(1, myQueue.pop());
+    assertEquals(2, myQueue.pop());
+    assertEquals(true, myQueue.empty());
+  }
 }
