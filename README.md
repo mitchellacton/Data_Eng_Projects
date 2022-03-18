@@ -1,12 +1,12 @@
-# Mitchell Acton . Jarvis Consulting
+# Mitchell Acton Data Engineering/Analysis Projects
 
 I graduated with a Master of Engineering degree from the University of Western Ontario and a Bachelor of Applied Science degree from the University of Waterloo. I am very interested in the field of Data Science and Engineering due to its wide range of applications, and I have professional experience in real-time data analytics, machine learning algorithms in Python, and object oriented programming in Java. Since starting with Jarvis, I have become comfortable working in an Agile/Scrum development cycle, have gained valuable experience with Linux, PostgreSQL database management, and Java. I'm looking forward to getting the opportunity to put these tools to use along with my existing data analysis and machine learning skills to make high quality software products with significant business impacts.
 
 ## Skills
 
-**Proficient:** Java, Python, JavaScript, RDBMS/SQL, Agile/Scrum, Git
+**Proficient:** Java, Python, JavaScript, RDBMS/SQL, Agile/Scrum, SQL, Git
 
-**Competent:** Linux/Bash, Hadoop, Docker, Machine Learning (Python scikit-learn, Pandas, NumPy), Cloud Computing (MS Azure/IBM Watson), Maven
+**Competent:** Linux/Bash, Hadoop, Machine Learning (Python scikit-learn, Pandas, NumPy), Cloud Computing (MS Azure/IBM Watson), Maven
 
 **Familiar:** C++, Springboot, Neural Networks, Networking (TCP/IP), Computer Vision (Python OpenCV, PyTorch)
 
